@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fake Job Detection</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Email Classification</h1>
+
+    <form action="/predict" method="POST">
+      <label for="job_text">Paste Email Text:</label>
+      <textarea id="job_text" name="email_text" rows="8" placeholder="Paste the email text here..." required></textarea>
+      <button type="submit">Classify Email</button>
+    </form>
+
+    {% if prediction %}
+    <div class="result-box">
+      <p class="result-text">Prediction: <strong>{{ prediction }}</strong></p>
+    </div>
+    {% endif %}
+  </div>
+</body>
+</html>
