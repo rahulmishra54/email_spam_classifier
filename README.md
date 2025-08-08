@@ -70,7 +70,7 @@ Open in browser
 Go to http://127.0.0.1:5000/
 
 🧠 Model Training
-The model is trained using TF-IDF Vectorization and Logistic Regression.
+The model is trained using TF-IDF Vectorization and Multinomial Naive Bayes (MNB).
 
 Preprocessing steps include:
 
